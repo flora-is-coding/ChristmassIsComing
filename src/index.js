@@ -6,14 +6,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lottery from "./Lottery";
+import Results from "./Results";
+import { Lottery as LotteryProvider } from "./contexts/Lottery";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/lottery" element={<Lottery />} />
-    </Routes>
-    <Snowfall color="white" />
+    <LotteryProvider>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/lottery" element={<Lottery />} />
+        <Route path="/results" element={<Results />} />
+      </Routes>
+      <Snowfall color="white" />
+    </LotteryProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
