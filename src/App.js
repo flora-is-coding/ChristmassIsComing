@@ -9,7 +9,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const countdown = () => {
-    const endDate = new Date("December 24, 2021 00:00:00").getTime();
+    const endDate = new Date("December 24, 2022 00:00:00").getTime();
     const today = new Date().getTime();
 
     const difference = endDate - today;
